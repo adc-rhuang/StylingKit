@@ -66,7 +66,7 @@ static NSDictionary *PSEUDOCLASS_MAP;
 static const char STYLE_CHILDREN;
 
 // if on ARM64, then we can't/don't need to use 'objc_msgSendSuper_stret'
-#if defined(__arm64__)
+#if defined(__LP64__) || defined(__i386__)
 #define objc_msgSendSuper_stret objc_msgSendSuper
 #endif
 
